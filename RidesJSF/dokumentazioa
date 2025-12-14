@@ -1,0 +1,38 @@
+1. Aurkitutako arazoak. Zeintzuk izan dira eta nola konpondu dituzue.
+Hasieran JSF-a egiterakoan arazo eta buruhauste ugari izan nituen facaderekin. Denbora asko galdu nuen hasierako proiektua martxan jarri arte,
+eta proiektua berriz ere hasieratik egitea erabaki nuen. Ondoren konturatu nintzen Bean batean ez nuela eraikitzaile huts bat sortu, eta horregatik
+ematen zidan errorea. Behin hasierako JSF horiek egitea lortu nuenean ez ditut arazo asko izan beste inplementazioak gehitzeko. 
+Aipatzekoa da login bean-ean hasieran @ViewScoped nuela, eta ez zizkidan erabiltzailearen datuak ongi gordetzen. Hala ere, nahiko erraz konpondu dut arazo hori.
+Bestalde, Bi arraylistetan (Userreko rides lista, eta Ride-eko erreserbalist lista) FetchType-ekin arazoak izan ditut. Egia esan oraindik ere ez dut oso ongi ulertzen
+zergatik ematen zidan errore hori, baina Lazy eta Eager jarriz probatzen joan naiz, eta azkenean ongi egiten dit.
+
+Hibernaterekin, berriz, ez ditut arazo ugari izan. Egia da hasieran MariaDBrekin baimenekin loturiko arazo batzuk izan ditudala (nik uste linux erabiltzen dudalako ematen zizkidala errore horiek),
+baina behin arazo horiek konponduta ez dut bestelako arazorik izan.
+
+2. Proiektuaren GitHub-eko URLa
+https://github.com/LurLopez/HIBERNATE_PROIEKTUA
+
+3. Bideoaren URLa (bideoa igo ez bada)
+https://drive.google.com/file/d/11ZFTdxgYB5l8uN61Hs1bO92ukV94yBQG/view?usp=sharing
+
+4. Proiektuan sartutako ordu totalak eta honako aktibitate hauen arabera:
+a) Hasierako dokumentazioaren irakurketa. 30 minutu
+b) Diseinua. 20 minutu (aurreko urteko proiektu bera zenez, ez dut denbora asko pasa diseinuarekin)
+c) JSFko inplementazioa. 14 ordu (aipatu dudan facaderen errorearekin pasa dut denbora gehien, gutxigorabehera 6 ordu inguru galdu nituen)
+d) Hibernateko inplementazioa. 3 ordu
+e) Dokumentazioa. 30 minutu
+f) Besteak.
+
+
+5. Egindako lanari buruzko ondorio pertsonalak.
+Orokorrean gustatu zait proiektu hau egitea. Inoiz ez genuen JSF-a erabili eta nik uste nahiko ongi ikasi dudala nola funtzionatzen duen. Hala eta guztiz ere, badauzkat gomendio batzuk:
+
+1:JSF-aren hasieratzea: hasieran proiektu zaharra hartzea, .jar batean bihurtzea, eta batez ere, config fitxategia ordenadoreko beste karpeta batera kopiatzea nahiko nahasgarria egin zait.
+Egia da dokumentazioan ongi adierazita zegoela, baina config fitxategia kopiatzeko nire karpetan beste karpeta batzuk sortzea oso nahasgarria egin zait. Hurrengo baterako hobe izango litzake
+agian oinarri-oinarrizko JSF-rides proiektu hori zuek ematea aurrez aipatu ditudan arazo horiek ekiditeko.
+
+2:Aurreko proiektu bera: Oso errepikakorra iruditu zait aurreko proiektu bera JSF eta hibernaten inplementatzea. Badakit aurtengo helburua iaz egin genituen lanak berrikustea eta hobetzea 
+dela, baina ongi egongo litzake beste erabilpen kasu berriren bat edo inplementatzea.
+
+Hala ere, orokorrean asko gustatu zait proiektu hau egitea.Irakasleak emandako dokumentazioa oso lagungarria egin zait, eta nik uste aurrez aipatu ditudan puntu horiek hobetuko balira
+oso proiektu interesgarria eta ikasitakoa praktikan jartzeko aukera ematen duen lan bat izango litzakeela.
