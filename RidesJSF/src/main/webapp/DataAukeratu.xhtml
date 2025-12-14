@@ -1,0 +1,32 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Data Aukeratu</title>
+    </h:head>
+
+    <h:body>
+        <h:messages id="mezuak" style="color:red; font-weight:bold; list-style-type: disc; margin-left: 15px;" />
+
+        <h:form id="queryForm">
+            <table style="border-spacing: 10px; margin-bottom: 15px;">
+                <tr>
+                    <td><h3>Data:</h3></td>
+                    <td>
+                       <p:calendar id="data" value="#{antidopping.data}" navigator="true" mode="popup" pattern="dd/MM/yyyy" required="true" 
+             />
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <h:commandButton value="GIDARIA AUKERATU" action="useraukeratu"
+                                 style="padding:8px 15px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;" />
+            </p>
+        </h:form>
+    </h:body>
+</ui:composition>

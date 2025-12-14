@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Bidaia Sortu</title>
+</h:head>
+
+<h:body>
+
+    <h:form style="margin-bottom:15px;">
+
+        <h:panelGrid columns="2" cellpadding="5" style="margin-bottom:10px;">
+            <h:outputLabel for="nondik" value="Nondik:" />
+            <h:inputText id="nondik" value="#{createrides.nondik}" style="padding:5px; width:200px;" />
+
+            <h:outputLabel for="nora" value="Nora:" />
+            <h:inputText id="nora" value="#{createrides.nora}" style="padding:5px; width:200px;" />
+
+            <h:outputLabel for="eserlekuak" value="Eserlekuak:" />
+             
+			<h:inputText id="eserlekuak" value="#{createrides.eserlekuak}" 
+            	 style="padding:5px; width:200px;">
+			</h:inputText>
+
+
+            <h:outputLabel for="prezioa" value="Prezioa:" />
+            <h:inputText id="prezioa" value="#{createrides.prezioa}" style="padding:5px; width:200px;" />
+        </h:panelGrid>
+
+        <h:outputLabel for="data" value="Data:" />
+        <p:calendar id="data" value="#{createrides.data}" navigator="true" mode="popup" style="margin-bottom:10px;" />
+
+        <h:commandButton value="Bidali" action="#{createrides.bidali}"
+                         style="padding:8px 20px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer; font-weight:bold; margin-top:5px;" />
+
+    </h:form>
+
+    <h:form>
+        <h:commandButton value="Atzera" action="Menu"
+                         style="padding:8px 20px; background-color:#f44336; color:white; border:none; border-radius:4px; cursor:pointer; font-weight:bold;" />
+    </h:form>
+
+    <h:messages id="mezuak" style="color:blue; margin-top:10px;" />
+
+</h:body>
+</html>

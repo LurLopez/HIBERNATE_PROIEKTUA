@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<f:view>
+    <h:head>
+        <title>Erregistratu</title>
+    </h:head>
+    
+    <h:body>
+        <h3>Erregistratu</h3>
+
+        <h:messages style="color:red" />
+
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5">
+                
+                <h:outputLabel value="Mota:" />
+						<h:selectOneRadio value="#{erregistratu.mota}" required="true" 
+                  		requiredMessage="Mesedez, aukeratu Driver edo Traveler">
+    
+    					<f:selectItem itemLabel="Gidaria" itemValue="Driver" />
+    					<f:selectItem itemLabel="Bidaiaria" itemValue="Traveler" />
+    
+				</h:selectOneRadio>
+                
+                
+                
+                <h:outputLabel value="Erabiltzaile Izena:" />
+                <h:inputText id="erabiltzailea" value="#{erregistratu.izena}" required="true" requiredMessage="Izena beharrezkoa da"/>
+            
+                <h:outputLabel value="Pasahitza:" />
+                <h:inputSecret id="pasahitza" value="#{erregistratu.pasahitza}" required="true" requiredMessage="Pasahitza beharrezkoa da"/>
+                
+                <h:outputLabel value="Pasahitza Konfirmatu:" />
+                <h:inputSecret id="pasahitzakonf" value="#{erregistratu.pasahitza_konfirmatu}" required="true" requiredMessage="Konfirmazioa beharrezkoa da"/>
+                
+                <h:outputLabel value="Emaila:" />
+                <h:inputText id="emaila" value="#{erregistratu.email}" required="true" requiredMessage="Emaila beharrezkoa da"/>
+                
+            </h:panelGrid>
+
+            <br/>
+
+            <h:commandButton value="Erregistratu" action="#{erregistratu.Erregistratu}" />
+            
+            <br/><br/>
+            <hr width="350" align="left"/> <h:outputText value="Dagoeneko erregistratuta zaude? " />
+            
+            <h:commandButton value="Login" action="login" immediate="true" />
+            
+        </h:form>
+    </h:body>
+</f:view>
+</html>

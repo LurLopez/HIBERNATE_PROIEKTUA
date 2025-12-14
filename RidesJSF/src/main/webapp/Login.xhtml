@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<f:view>
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    
+    <h:body>
+        <h3>Saioa Hasi</h3>
+        
+        <h:messages style="color:red" />
+
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5">		
+                
+                <h:outputLabel value="Erabiltzailea:" />
+                <h:inputText value="#{login.izena}" required="true" requiredMessage="Sartu izena"/>
+            
+                <h:outputLabel value="Pasahitza:" />
+                <h:inputSecret value="#{login.pasahitza}" required="true" requiredMessage="Sartu pasahitza"/>
+            
+            </h:panelGrid>
+
+            <br/>
+            
+            <h:commandButton value="Sartu" action="#{login.loginEgin}" />
+            
+            <br/><br/>
+            <hr width="300" align="left"/> <h:outputText value="Ez zaude erregistratuta? " />
+            
+            <h:commandButton value="Erregistratu" action="erregistratu" immediate="true" />
+            
+            <h:commandButton value="GIDARI ETA DATA BATEN BIDAI GUZTIAK ERAKUTSI" action="dataaukeratu" immediate="true" />
+
+        </h:form>
+    </h:body>
+</f:view>
+</html>

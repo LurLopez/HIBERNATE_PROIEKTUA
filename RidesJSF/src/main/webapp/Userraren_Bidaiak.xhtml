@@ -1,0 +1,40 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:messages id="mezuak" style="color:red; font-weight:bold; list-style-type: disc; margin-left: 15px;" />
+	<h:form style="margin-bottom:15px;">
+    <table style="border-spacing: 10px; margin-bottom: 15px;">
+        <tr>
+            <td><h3>Userrak:</h3></td>
+            <td>
+                <h:selectOneMenu id="aukeratutakobidaia" value="#{antidopping.aukeratutakouserra}" styleClass="select-menu">
+                    <f:selectItems value="#{antidopping.userlist}" />
+                </h:selectOneMenu>
+            </td>
+        </tr>
+        
+   
+		
+        <h:commandButton value="BIDAIAK IKUSI" action="#{antidopping.bidaiakerakutsi}"
+                         style="padding:8px 15px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;" />
+      </table>
+      
+              <tr>
+            <td><h3>Bidaiak:</h3></td>
+            <td>
+                <h:selectOneMenu id="bidaiak"  styleClass="select-menu">
+                    <f:selectItems value="#{antidopping.bidaialist}" />
+                </h:selectOneMenu>
+            </td>
+        </tr>
+      
+     </h:form>  
+
+
+
+
+</ui:composition>

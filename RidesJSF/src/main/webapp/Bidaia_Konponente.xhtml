@@ -1,0 +1,54 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:messages id="mezuak" style="color:red; font-weight:bold; list-style-type: disc; margin-left: 15px;" />
+
+    <table style="border-spacing: 10px; margin-bottom: 15px;">
+        <tr>
+            <td><h3>From:</h3></td>
+            <td>
+                <h:selectOneMenu id="nondikcombobox" value="#{queryRides.nondik}" styleClass="select-menu">
+                    <f:selectItems value="#{queryRides.nondiklist}" />
+                    <f:ajax event="change" render="noracombobox" />
+                </h:selectOneMenu>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>To:</h3></td>
+            <td>
+                <h:selectOneMenu id="noracombobox" value="#{queryRides.nora}" styleClass="select-menu">
+                    <f:selectItems value="#{queryRides.noralist}" />
+                </h:selectOneMenu>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Data:</h3></td>
+            <td>
+                <p:calendar id="data" value="#{queryRides.data}" navigator="true" mode="popup" />
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <h:commandButton value="Bidaia Bilatu" action="#{queryRides.bidaiabilatu}"
+                         style="padding:8px 15px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;" />
+    </p>
+
+    <table style="border-spacing: 10px; margin-top: 15px;">
+        <tr>
+            <td><h3>Emaitza:</h3></td>
+            <td>
+                <h:selectOneMenu id="emaitza" value="#{queryRides.aukeratutakoRide}" converter="omnifaces.SelectItemsConverter">
+                    <f:selectItems value="#{queryRides.rides}" var="r" 
+                                   itemValue="#{r}" 
+                                   itemLabel="#{r.from} -> #{r.to} prezioa: #{r.price}€ eserleku libreak: #{r.plazalibreak}" />
+                </h:selectOneMenu>
+            </td>
+        </tr>
+    </table>
+
+</ui:composition>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view>
+    <h:head>
+        <title>Bidaia Erreserbatu</title>
+    </h:head>
+    <h:body>
+        <h:form id="erreserbaForm">
+            
+            <ui:include src="Bidaia_Konponente.xhtml" />
+
+            <p>
+                <h:commandButton value="Erreserbatu" action="#{queryRides.bidaiaErreserbatu}" 
+                                 style="padding:8px 15px; background-color:#2196F3; color:white; border:none; border-radius:4px; cursor:pointer;" />
+            </p>
+       	<p>
+        <h:commandButton value="Saioa Itxi" action="saioa_itxi"
+                         style="padding:8px 15px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;" />
+    	</p>     
+	
+
+        </h:form>
+    </h:body>
+</f:view>
+</html>
